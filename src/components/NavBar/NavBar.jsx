@@ -1,5 +1,5 @@
 import React from "react";
-import "./NavBar.styles.less"
+import  "./NavBar.styles.less"
 import "../../index.css"
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -23,8 +23,8 @@ function NavBar() {
     return (
         <>
             <div className="mx-auto text-white mt-5 header-title-text">theHarrisCode</div>
-            <Disclosure as="nav" className="bg-gray-800 rounded-2xl shadow-2xl mt-6 border-black nav-bar flex justify-between ">
-                <div className="text-white flex ">Darren Harris</div>
+            <Disclosure as="nav" className="bg-gray-800 rounded-2xl shadow-2xl mt-6 border-black flex justify-between nav-bar">
+                <div className="text-white flex nav-bar-title">Darren Harris</div>
                 <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                     {/* Mobile menu button*/}
                     <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
