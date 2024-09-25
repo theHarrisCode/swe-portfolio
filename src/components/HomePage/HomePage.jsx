@@ -1,10 +1,13 @@
 import React from "react";
 import NavBar from "../NavBar/NavBar";
+import "./HomePage.styles.css"
+
 function HomePage(){
     return(
         <>
-            <NavBar />
-            <div>this is a test</div>
+            <div class="home-page-container">
+                <NavBar />
+            </div>
         </>
     )
 }
