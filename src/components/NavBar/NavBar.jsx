@@ -15,6 +15,8 @@ const navigation = [
     { name: 'Projects', href: 'https://www.google.com', current: false },
     { name: 'Resume', href: 'https://www.google.com', current: false },
     { name: 'Contact Me', href: 'https://www.google.com', current: false },
+    { name: 'test', href: 'https://www.nba.com', current: true },
+
 ]
 
 
