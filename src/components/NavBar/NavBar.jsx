@@ -10,12 +10,12 @@ function classNames(...classes) {
 
 
 const navigation = [
-    { name: 'Who Am I ?', href: 'https://www.google.com', current: true },
-    { name: 'Skills', href: 'https://www.google.com', current: true },
+    { name: 'Who Am I ?', href: 'https://www.google.com', current: false },
+    { name: 'Skills', href: 'https://www.google.com', current: false },
     { name: 'Projects', href: 'https://www.google.com', current: false },
     { name: 'Resume', href: 'https://www.google.com', current: false },
     { name: 'Contact Me', href: 'https://www.google.com', current: false },
-    { name: 'test', href: 'https://www.nba.com', current: true },
+    { name: 'test', href: 'https://www.nba.com', current: false },
 ]
 
 
@@ -43,7 +43,7 @@ function NavBar() {
                             aria-current={item.current ? 'page' : undefined}
                             className={classNames(
                                 item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                                'rounded-md px-3 py-2 text-sm font-medium',
+                                'rounded-md px-3 py-2 text-xl font-medium flex items-center',
                             )}
                         >
                             {item.name}
