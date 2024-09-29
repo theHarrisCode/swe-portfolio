@@ -15,14 +15,13 @@ const navigation = [
     { name: 'Projects', href: 'https://www.google.com', current: false },
     { name: 'Resume', href: 'https://www.google.com', current: false },
     { name: 'Contact Me', href: 'https://www.google.com', current: false },
-    { name: 'test', href: 'https://www.nba.com', current: false },
 ]
 
 
 function NavBar() {
     return (
         <>
-            <Disclosure as="nav" className="bg-gray-800 rounded-2xl shadow-2xl my-6 border-black flex justify-between nav-bar">
+            <Disclosure as="nav" className="bg-black rounded-2xl shadow-2xl my-6 border-black flex justify-between nav-bar">
                 <div className="text-white flex tracking-wider nav-bar-title">Darren Harris</div>
                 <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                     {/* Mobile menu button*/}
