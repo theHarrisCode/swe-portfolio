@@ -1,3 +1,11 @@
-.intro-text{
-    color: white;
+.intro-text-container{
+    color: black;
+    animation:
+    caret 0.5s steps(2) infinite;
+    font-family: Copperplate, "Copperplate Gothic Light", fantasy;
 }
+
+@keyframes caret {
+    0% { color: var(--bgColor); }
+    100% { color: black; }
+  }
