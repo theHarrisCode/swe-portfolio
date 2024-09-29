@@ -5,6 +5,8 @@ import About from "../About/About"
 import "./HomePage.styles.less";
 import medium from "../../assets/images/medium-round-icon.webp";
 import cc from "../../assets/images/code-and-coffee-logo-transparent.png";
+import Typewriter from "../Typewriter/Typewriter";
+
 
 
 function HomePage() {
@@ -28,7 +30,9 @@ function HomePage() {
             </div>
             <div className="main-page-layout">
                 <div className="min-h-screen home-page-container">
-                    <div className="mx-auto text-black mt-5 header-title-text">theHarrisCode</div>
+                    <div class="header-title-text">
+                        <Typewriter text="thheHarrisCode"/>
+                    </div>
                     <NavBar />
                     <Home />
                 </div>
