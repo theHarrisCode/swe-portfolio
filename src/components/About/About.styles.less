@@ -4,15 +4,31 @@
 }
 
 #rec-card-container {
-    max-width: 250px;
+    max-width: fit-content;
     display: flex;
     flex-direction: column;
     padding-top: 20px;
-    justify-content:space-between;
 }
 
 #about-titles {
     font-size: 24px;
+}
+
+#about-pic{
+    max-height: 150px;
+}
+
+#about-text{
+    max-height: fit-content;
+    padding: 7.5px 15px;
+}
+
+#rec-pic-text{
+    display: flex;
+    flex-direction: row;
+    min-height: fit-content;
+    padding-top: 10px;
+    align-items: center;
 }
 
 /********** CLASS SELECTORS **********/
@@ -22,4 +38,25 @@
 
 .bottom-inner-container{
     height: 345px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+.what-now-text {
+    max-width: 50%;
+    height: 2200px;
+    padding: 30px;
+}
+
+.what-now-pic {
+    min-width: 50%;
+    min-height: 100%;
+}
+
+.inner-rec-container {
+    display: flex;
+    padding-top: 30px;
 }
