@@ -1,14 +1,15 @@
 import React from "react";
 import "./About.styles.less";
 import liberia from "../../assets/images/Flag-Liberia.webp";
-import statpad from "../../assets/images/stat-pad-black-heavy_light.png";
+// import statpad from "../../assets/images/stat-pad-black-heavy_light.png";
 import ric from "../../assets/images/ric-icon.jpg";
 
-function About() {
+
+function About( { headerStyles } ) {
     return (
         <div className="min-w-full">
-            <div className="mt-5 min-w-max about-me-text-container">
-                <h1 className="mx-auto text-black about-me-text" id="page-titles">Who Am I?</h1>
+            <div className={headerStyles.divClass}>
+                <h1 className={headerStyles.h1Class}>Who Am I?</h1>
             </div>
             <div className="flex flex-col min-h-full about-me-info">
                 <div className="flex flex-row top-inner-container">
@@ -21,8 +22,8 @@ function About() {
                                     I was born in the United States but my heritage is from Liberia.
                                     My love for technology started at young age with videos games and playing computer games
                                     and Since then my passion has grown into Software Engineering.
-                                    When I'm not coding I like spending time with loved ones.
-                                    I like to stay active whether it's in the gym or splaying sports.
+                                    When I'm not coding I like traveling with loved ones.
+                                    I like to stay active whether it's in the gym or playing sports.
                                     I recently enrolled in fencing classes which I'm really
                                     looking forward to.
                                 </p>
@@ -51,7 +52,9 @@ function About() {
                     <div id="rec-card-container">
                         <div className="title" id="about-titles">What I'm Up To Now</div>
                         <div id="rec-pic-text" className="inner-rec-container">
-                            <img src={statpad} alt="statPad" id="about-pic" className="what-now-pic"/>
+                            {/* <div className="what-now-pic-container">
+                                <img src={statpad} alt="statPad" id="about-pic" className="what-now-pic"/>
+                            </div> */}
                             <p id="about-text" className="what-now-text">
                                 As an engineer there is always something new to learn. My efforts lately have been going 
                                 towards sharpening my skills of front-end development by continuing to learn JavaScript 

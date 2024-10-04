@@ -1,7 +1,4 @@
 /********** ID SELECTORS ************/
-#page-titles {
-    font-size: 2.25rem;
-}
 
 #rec-card-container {
     max-width: fit-content;
@@ -34,6 +31,7 @@
 /********** CLASS SELECTORS **********/
 .top-inner-container{
     height: 345px;
+    flex: 1;
 }
 
 .bottom-inner-container{
@@ -51,12 +49,19 @@
     padding: 30px;
 }
 
-.what-now-pic {
+.what-now-pic-container{ 
+    display: flex;
+    justify-content: center;
     min-width: 50%;
     min-height: 100%;
 }
 
 .inner-rec-container {
     display: flex;
+    justify-content: center;
     padding-top: 30px;
+}
+
+.about-me-info {
+    flex: 1;
 }
