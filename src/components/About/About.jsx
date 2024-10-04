@@ -13,7 +13,7 @@ function About( { headerStyles } ) {
             </div>
             <div className="flex flex-col min-h-full about-me-info">
                 <div className="flex flex-row top-inner-container">
-                    <div className="flex justify-center w-1/2 inline left-inner-container">
+                    <div className=" justify-center w-1/2  left-inner-container">
                         <div id="rec-card-container">
                             <div className="inline-block title" id="about-titles">Background</div>
                             <div id="rec-pic-text">
