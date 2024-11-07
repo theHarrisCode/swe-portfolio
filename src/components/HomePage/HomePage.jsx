@@ -7,6 +7,7 @@ import medium from "../../assets/images/medium-round-icon.webp";
 import cc from "../../assets/images/code-and-coffee-logo-transparent.png";
 import Typewriter from "../Typewriter/Typewriter";
 import Skills from "../Skills/Skills";
+import Projects from "../Projects/Projects";
 
 // Styles for the header title of each page
 const headerStyles = {
@@ -48,7 +49,7 @@ function HomePage() {
                     <Skills headerStyles={ headerStyles } />
                 </div>
                 <div className="min-h-screen" id="projects-section">
-                    Projects
+                    <Projects headerStyles={ headerStyles } />
                 </div>
                 <div className="min-h-screen" id="resume-section">
                     Resume
