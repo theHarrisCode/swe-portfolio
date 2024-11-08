@@ -1,9 +1,11 @@
 import "./Projects.styles.less"
 import { useState } from "react"
 import { Button } from "@radix-ui/themes";
-import { PlusIcon, TrashIcon } from "@radix-ui/react-icons"
+import { TrashIcon } from "@radix-ui/react-icons"
 import itinerary_photo from "../../assets/images/project-photos/itinerary-snapshot.png"
 import EditModal from "../Modals/EditModal.jsx"
+import AddModal from "../Modals/AddModal.jsx"
+
 
 function Projects({ headerStyles }) {
 
@@ -21,10 +23,8 @@ function Projects({ headerStyles }) {
                 </div>
                 <div className="prj-btn-container">
                         <EditModal sendToParentData = { handleProjectVisibility }/>
-                    {isVisible && (<div>
-                        <Button color="gray" id="add-btn" variant="outline">
-                            <PlusIcon /> Add
-                        </Button>
+                    {isVisible && (<div className="flex">
+                        <AddModal/>
                         <Button color="red" id="rmv-btn" variant="outline">
                             <TrashIcon /> Remove
                         </Button>
