@@ -49,16 +49,18 @@ export default function AddModal({ sendToParentData }) {
         >
           <Box sx={style}>
             <form>
-
-              <label>Project Name</label>
-              <input name='editPassword' placeholder='Project Name' type='text' className='pswrd-input' />
-              
-              <label>Photo</label>
-              <input type="file" onChange={ handleInputFile }/>
-
-              <label>Project Description</label>
-              <input type="textbox" />
-              
+              <div className='input-container'>
+                <label className='add-modal-label'>Project Name</label>
+                <input name='editPassword' placeholder='Project Name' type='text' className='pswrd-input' />
+              </div>
+              <div className='input-container'>
+                <label className='add-modal-label'>Photo</label>
+                <input type="file" onChange={ handleInputFile }/>
+              </div>
+              <div className='input-container'>
+                <label className='add-modal-label'>Project Description</label>
+                <textarea name="prj-area" id="prj-area" rows="15" cols="32"></textarea>
+              </div>
               <Button variant='outline' color='gray' id='sbmt-btn' type='submit'>Submit</Button>
             </form>
           </Box>
