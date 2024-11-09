@@ -1,8 +1,6 @@
-// import {useState } from 'react';
 import './Skills.styles.less'
 import React from 'react'
 
-// import all the photos needed in one statement
 const images = require.context('../../assets/images/language-icon/', true, /\.(png|jpe?g|svg|webp)$/);
 
 const imageList = images.keys().map((imagePath) => {

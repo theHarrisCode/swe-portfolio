@@ -9,7 +9,7 @@ import Typewriter from "../Typewriter/Typewriter";
 import Skills from "../Skills/Skills";
 import Projects from "../Projects/Projects";
 
-// Styles for the header title of each page
+/* Styles for the header title of each page */
 const headerStyles = {
     divClass: "mt-5 min-w-max",
     h1Class: "mx-auto text-black text-4xl"

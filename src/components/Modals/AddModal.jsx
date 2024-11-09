@@ -6,6 +6,7 @@ import Modal from '@mui/material/Modal';
 import { PlusIcon } from "@radix-ui/react-icons"
 import './AddModal.styles.less'
 
+/* Modal styling */
 const style = {
   position: 'absolute',
   top: '50%',
@@ -19,12 +20,10 @@ const style = {
 };
 
 export default function AddModal({ sendToParentData }) {
-
   const [isVisible, setIsVisible] = useState(true);
-
+  const [file, setFile] = useState()
 
   /* Handling input file in project addition */
-  const [file, setFile] = useState()
   const handleInputFile = (e) => {
     console.log(e.target.files)
     setFile(URL.createObjectURL(e.target.files[0]))

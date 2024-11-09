@@ -1,7 +1,6 @@
 import React from "react";
 import "./About.styles.less";
 import liberia from "../../assets/images/Flag-Liberia.webp";
-// import statpad from "../../assets/images/stat-pad-black-heavy_light.png";
 import ric from "../../assets/images/ric-icon.jpg";
 
 
@@ -52,9 +51,6 @@ function About( { headerStyles } ) {
                     <div id="rec-card-container">
                         <div className="title" id="about-titles">What I'm Up To Now</div>
                         <div id="rec-pic-text" className="inner-rec-container">
-                            {/* <div className="what-now-pic-container">
-                                <img src={statpad} alt="statPad" id="about-pic" className="what-now-pic"/>
-                            </div> */}
                             <p id="about-text" className="what-now-text">
                                 As an engineer there is always something new to learn. My efforts lately have been going 
                                 towards sharpening my skills of front-end development by continuing to learn JavaScript 
