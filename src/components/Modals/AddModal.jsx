@@ -50,15 +50,19 @@ export default function AddModal({ sendToParentData }) {
             <form>
               <div className='input-container'>
                 <label className='add-modal-label'>Project Name</label>
-                <input name='editPassword' placeholder='Project Name' type='text' className='pswrd-input' />
+                <input name='project-name' placeholder='Project Name' type='text' className='pswrd-input' />
               </div>
               <div className='input-container'>
                 <label className='add-modal-label'>Photo</label>
-                <input type="file" onChange={ handleInputFile }/>
+                <input name='project-password' type="file" onChange={ handleInputFile }/>
               </div>
               <div className='input-container'>
                 <label className='add-modal-label'>Project Description</label>
                 <textarea name="prj-area" id="prj-area" rows="15" cols="32"></textarea>
+              </div>
+              <div className="input-container">
+                <label className="add-modal-label">Project Link</label>
+                <input name="project-link" type="text" className='pswrd-input' />
               </div>
               <Button variant='outline' color='gray' id='sbmt-btn' type='submit'>Submit</Button>
             </form>
