@@ -1,10 +1,12 @@
 import * as React from 'react';
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import Box from '@mui/material/Box';
 import { Button } from "@radix-ui/themes";
 import Modal from '@mui/material/Modal';
 import { PlusIcon } from "@radix-ui/react-icons"
 import './AddModal.styles.less'
+import { firestore } from "../../Firebase"
+import { addDoc, collection } from "@firebase/firestore"
 
 /* Modal styling */
 const style = {
@@ -33,6 +35,34 @@ export default function AddModal({ sendToParentData }) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  
+  /* Handling saving project data */
+  const handleSave = async (e) => {
+    e.preventDefault();
+
+    let projectData = {
+      name: nameRef.current.value,
+      photo: photoRef.current.value,
+      description: desRef.current.value,
+      link: linkRef.current.value
+    }
+
+    try{
+      addDoc(dbRef, projectData)
+    }
+    catch(err){
+      console.error(err);
+    }
+  }
+
+  /* Database Reference */
+  const dbRef = collection(firestore, 'Projects');
+
+  /* Reference for each input value */
+  const nameRef = useRef();
+  const photoRef = useRef()
+  const desRef = useRef();
+  const linkRef = useRef();
 
   return (
     <div>
@@ -47,22 +77,22 @@ export default function AddModal({ sendToParentData }) {
           aria-describedby="modal-modal-description"
         >
           <Box sx={style}>
-            <form>
+            <form onSubmit={ handleSave }> 
               <div className='input-container'>
                 <label className='add-modal-label'>Project Name</label>
-                <input name='project-name' placeholder='Project Name' type='text' className='pswrd-input' />
+                <input name='project-name' placeholder='Project Name' type='text' className='pswrd-input' ref={nameRef}/>
               </div>
               <div className='input-container'>
                 <label className='add-modal-label'>Photo</label>
-                <input name='project-password' type="file" onChange={ handleInputFile }/>
+                <input name='project-password' type="file" onChange={ handleInputFile } ref={photoRef}/>
               </div>
               <div className='input-container'>
                 <label className='add-modal-label'>Project Description</label>
-                <textarea name="prj-area" id="prj-area" rows="15" cols="32"></textarea>
+                <textarea name="prj-area" id="prj-area" rows="15" cols="32" ref={desRef}></textarea>
               </div>
               <div className="input-container">
                 <label className="add-modal-label">Project Link</label>
-                <input name="project-link" type="text" className='pswrd-input' />
+                <input name="project-link" type="text" className='pswrd-input' ref={linkRef}/>
               </div>
               <Button variant='outline' color='gray' id='sbmt-btn' type='submit'>Submit</Button>
             </form>
