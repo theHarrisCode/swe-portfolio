@@ -1,10 +1,10 @@
 import './Skills.styles.less'
 import React from 'react'
 
+/* Variables */
 const images = require.context('../../assets/images/language-icon/', true, /\.(png|jpe?g|svg|webp)$/);
 
 const imageList = images.keys().map((imagePath) => {
-    console.log("image-path: ", imagePath)
     const category = imagePath.split('/')[1];
 
     return {
@@ -19,6 +19,7 @@ const language_array = {
     interests: ['Back-end Development', 'Game Development', 'AI/Machine Learning']
 }
 
+/* Functions */
 function searchQuery(ele){
     return (`https://www.google.com/search?q=${ele}&oq=java&gs_lcrp
         =EgZjaHJvbWUyDAgAEEUYORixAxiABDIOCAEQRRgnGDsYgAQYigUyBggCEEUYPTIGCAMQRRg8MgYIBBBFGDwyBgg
@@ -26,6 +27,8 @@ function searchQuery(ele){
 }
 
 export default function Skills({ headerStyles }) {
+
+    /* Images filtered into array variables named by skills categories */
     const mainImages = imageList.filter(img => img.category === 'Main');
     const interestImages = imageList.filter(img => img.category === 'Interests');
     const exposureImages = imageList.filter(img => img.category === 'Exposure');
