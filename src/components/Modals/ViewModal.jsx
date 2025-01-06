@@ -34,7 +34,7 @@ export default function ViewModal() {
             >
                 <Box sx={style}>
                         <input name='editPassword' placeholder='Password' type='password' className='pswrd-input' />
-                        <Button variant='outline' color='gray' id='sbmt-btn' onClick={handleClose}>Submit</Button>
+                        <Button variant='outline' color='gray' className='close-btn' onClick={handleClose}>Close</Button>
                 </Box>
             </Modal>
         </div>
